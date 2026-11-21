@@ -488,8 +488,9 @@ LAND = [
 
 # Pin label nudges, keyed by story number: (dx, dy) from the pin point.
 PIN_OFF = {1: (14, -14), 2: (16, -14), 3: (-18, 4), 4: (12, -14),
-           5: (14, -14), 6: (-18, 8), 7: (12, -14), 9: (-16, -12),
-           10: (-18, -12), 11: (12, -14), 13: (-16, 10), 14: (14, -14)}
+           5: (-20, -14), 6: (-18, 8), 7: (12, -14), 9: (-16, -12),
+           10: (-18, -12), 11: (12, -14), 12: (-20, -14),
+           13: (-16, 10), 14: (14, -14)}
 
 
 # ------------------------------------------------------------ illustrations
@@ -676,10 +677,11 @@ def build():
     for i, ln in enumerate(wrap_words(SOURCES, 165)):
         cv.text5(8, fy + i * 9, ln, FAINT)
     fy += len(wrap_words(SOURCES, 165)) * 9 + 2
-    cv.text5(8, fy, "DATE CHECK - 21 NOV 2026: PERU M6.7 + M5.0 AFTERSHOCK; KAMCHATKA M4.4; GAZA TOLL PUBLISHED;", PAPER)
-    cv.text5(8, fy + 10, "KRYVYI RIH TOLL; COP31 STILL NO DEAL; INDIA 486/4 DAY 3; BEPICOLOMBO 19:24 CET; LAKKI MARWAT FOIL.", PAPER)
-    cv.text5(8, fy + 20, "20 NOV ITEMS ARE DATED ON THEIR CARDS; 19 NOV ITEMS TOO.", PAPER)
-    cv.text5(8, fy + 30, "ORIGINAL DRAWINGS  -  STDLIB PYTHON, DETERMINISTIC, NO NETWORK  -  2X SUPER-SAMPLED", FAINT)
+    cv.frame(6, fy - 3, 1012, 36, GOLD)
+    cv.text5(12, fy + 2, "DATE CHECK - 21 NOV 2026: PERU M6.7 + M5.0 AFTERSHOCK; KAMCHATKA M4.4; GAZA TOLL PUBLISHED;", PAPER)
+    cv.text5(12, fy + 12, "KRYVYI RIH TOLL; COP31 STILL NO DEAL; INDIA 486/4 DAY 3; BEPICOLOMBO 19:24 CET; LAKKI MARWAT FOIL.", PAPER)
+    cv.text5(12, fy + 22, "20 NOV ITEMS ARE DATED ON THEIR CARDS; 19 NOV ITEMS TOO.", PAPER)
+    cv.text5(8, fy + 38, "ORIGINAL DRAWINGS  -  STDLIB PYTHON, DETERMINISTIC, NO NETWORK  -  2X SUPER-SAMPLED", FAINT)
     return cv
 
 
